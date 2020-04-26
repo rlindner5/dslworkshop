@@ -150,8 +150,8 @@ class HelloPackage(Package):
 
 class HelloVmResources(AhvVmResources):
 
-    memory = 4
-    vCPUs = 1
+    memory = 2
+    vCPUs = 4
     cores_per_vCPU = 1
     disks = [
         AhvVmDisk.Disk.Scsi.cloneFromVMDiskPackage(CentosPackage, bootable=True),
