@@ -151,7 +151,7 @@ class HelloPackage(Package):
 class HelloVmResources(AhvVmResources):
 
     memory = 2
-    vCPUs = 6
+    vCPUs = 4
     cores_per_vCPU = 1
     disks = [
         AhvVmDisk.Disk.Scsi.cloneFromVMDiskPackage(CentosPackage, bootable=True),
@@ -182,7 +182,7 @@ class HelloSubstrate(Substrate):
 
     provider_type = "AHV_VM"
     provider_spec = HelloVm
-
+    provider_spec.name="rlindner-@@{calm_unique}@@"
     # Substrate Actions
     @action
     def __pre_create__():
